@@ -526,3 +526,36 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; mar
   .hero__horse { width: 78vw; right: -16vw; top: auto; bottom: 3%; transform: none; opacity: .12; }
   .hero__horse svg { animation: none; }
 }
+
+/* ============================================================
+   The Chad Line — highlighted sires
+   ============================================================ */
+.sires { background: var(--forest); color: var(--paper); }
+.sires .eyebrow { color: var(--brass-2); }
+.sires .section__title { color: var(--paper); }
+.sires .section__lede { color: rgba(246,241,231,.72); }
+.sires__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.sire {
+  text-align: center; padding: 2rem 1.6rem; border-radius: var(--radius);
+  border: 1px solid rgba(195,154,88,.28); background: rgba(255,255,255,.03);
+  transition: transform .5s var(--ease), background .5s var(--ease), border-color .5s var(--ease);
+}
+.sire:hover { transform: translateY(-6px); background: rgba(255,255,255,.06); border-color: var(--brass); }
+.sire__head { width: 150px; height: auto; margin: 0 auto .4rem; display: block; transition: transform .6s var(--ease); }
+.sire:hover .sire__head { transform: rotate(-3deg) scale(1.05); }
+.sire__head .ln { fill: none; stroke: var(--paper); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.sire__head .jaw { stroke: var(--brass-2); stroke-width: 6; transition: filter .4s var(--ease); }
+.sire:hover .sire__head .jaw { filter: drop-shadow(0 0 6px rgba(195,154,88,.85)); }
+.sire__head .eye { fill: var(--paper); }
+.sire__region { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--brass-2); margin: 0 0 .3rem; }
+.sire__name { font-family: var(--serif); font-size: 1.7rem; color: var(--paper); line-height: 1.05; }
+.sire__badges { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: center; margin: .7rem 0 .2rem; }
+.sire__badge {
+  font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brass-2);
+  border: 1px solid rgba(195,154,88,.4); padding: .28rem .6rem; border-radius: 999px;
+}
+.sire__jaw { display: flex; align-items: baseline; justify-content: center; gap: .5rem; margin: .9rem 0 .2rem; }
+.sire__jaw dt { font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: rgba(246,241,231,.6); }
+.sire__jaw dd { font-family: var(--serif); font-size: 2rem; color: var(--brass-2); margin: 0; }
+.sire__blurb { font-size: .88rem; font-weight: 300; color: rgba(246,241,231,.75); margin: .4rem 0 0; }
+.sires .collection__note { color: rgba(246,241,231,.55); }
