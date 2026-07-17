@@ -17,7 +17,7 @@ vanilla JavaScript.
 | `script.js` | Cart drawer, scroll reveals, count-up stats, waitlist form |
 | `favicon.svg` | Site icon |
 | `CNAME` | Custom domain for GitHub Pages (`bespokehorsecum.store`) |
-| `.github/workflows/deploy.yml` | Enables + deploys GitHub Pages on push to `main` |
+| `.nojekyll` | Tells GitHub Pages to serve files as-is (skip Jekyll) |
 
 ## Local preview
 
@@ -28,9 +28,14 @@ python3 -m http.server 8080
 
 ## Deployment
 
-Pushing to `main` triggers the GitHub Actions workflow, which enables GitHub
-Pages (if needed) and publishes the site. The `CNAME` file wires it to the
-custom domain.
+Deployed via GitHub Pages using **Deploy from a branch**:
+
+1. Repo **Settings → Pages → Build and deployment**
+2. **Source:** Deploy from a branch
+3. **Branch:** `main`, folder `/ (root)` → **Save**
+
+GitHub reads the `CNAME` file to apply the custom domain and issues an HTTPS
+certificate once DNS resolves. Every push to `main` republishes automatically.
 
 ### DNS (Squarespace)
 
