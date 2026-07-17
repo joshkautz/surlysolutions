@@ -433,4 +433,96 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; mar
     transition-duration: .001ms !important; scroll-behavior: auto !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .hh-line, .hh-mane { stroke-dashoffset: 0; }
+  .hh-eye { opacity: 1; }
+  .collection__soldbanner .dot { animation: none; }
+}
+
+/* ============================================================
+   Hero horse — self-drawing line art
+   ============================================================ */
+.hero__horse {
+  position: absolute; z-index: 0;
+  right: clamp(-20px, 4vw, 90px); top: 50%; transform: translateY(-52%);
+  width: min(38vw, 430px); pointer-events: none;
+}
+.hero__horse svg { width: 100%; height: auto; overflow: visible; animation: hh-float 9s ease-in-out infinite; }
+.hh-line, .hh-mane {
+  fill: none; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  animation: hh-draw 1.7s var(--ease) forwards; animation-delay: var(--d, 0s);
+}
+.hh-line { stroke: var(--forest); stroke-width: 3; opacity: .92; }
+.hh-mane { stroke: var(--brass); stroke-width: 2.6; }
+.hh-eye  { fill: var(--forest); opacity: 0; animation: hh-eye .5s ease forwards 1.3s; }
+.hh-manegroup { transform-origin: 150px 90px; animation: hh-sway 6s ease-in-out 2.4s infinite; }
+@keyframes hh-draw  { to { stroke-dashoffset: 0; } }
+@keyframes hh-eye   { to { opacity: 1; } }
+@keyframes hh-sway  { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-2deg); } }
+@keyframes hh-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+/* ============================================================
+   Sold-out product cards
+   ============================================================ */
+.card__stamp {
+  position: absolute; top: 50%; left: 50%; z-index: 3;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  border: 2px solid var(--paper); color: var(--paper);
+  font-family: var(--sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+  font-size: .82rem; padding: .5rem 1.1rem; border-radius: 3px;
+  background: rgba(20,38,29,.28); box-shadow: 0 6px 22px rgba(20,38,29,.28);
+  opacity: 0; animation: hh-eye .5s var(--ease) forwards .25s;
+}
+.card--soldout .card__media::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(20,38,29,.22), rgba(20,38,29,.5));
+}
+.card--soldout .card__tag { z-index: 2; }
+.card--soldout .card__media svg { filter: grayscale(.25); opacity: .9; }
+.card--soldout:hover .card__media svg { transform: scale(1.03); }
+.card__status {
+  font-size: .66rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--brass); font-weight: 600; margin: -.15rem 0 .1rem;
+}
+.card--soldout .card__price { color: var(--ink-soft); }
+.card__waitlist {
+  font-size: .78rem; letter-spacing: .05em; color: var(--forest); font-weight: 500;
+  display: inline-flex; align-items: center; gap: .4rem;
+  transition: gap .3s var(--ease), color .3s var(--ease);
+}
+.card__waitlist:hover { color: var(--brass); gap: .7rem; }
+
+/* Collection scarcity banner */
+.collection__soldbanner {
+  display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.4rem;
+  background: rgba(169,128,63,.12); color: var(--ink);
+  border: 1px solid rgba(169,128,63,.35); border-radius: 999px;
+  padding: .5rem 1.1rem; font-size: .82rem; letter-spacing: .01em; text-align: left;
+}
+.collection__soldbanner .dot {
+  width: .5rem; height: .5rem; border-radius: 50%; background: var(--brass); flex: none;
+  animation: pulse 2.2s ease-out infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(169,128,63,.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(169,128,63,0); }
+  100% { box-shadow: 0 0 0 0 rgba(169,128,63,0); }
+}
+
+/* Drawer sold-out empty state */
+.drawer__empty {
+  text-align: center; margin-top: 2rem; color: var(--ink-soft); font-weight: 300;
+  display: grid; gap: .9rem; justify-items: center;
+}
+.drawer__empty p { margin: 0; max-width: 32ch; }
+.drawer__sold {
+  display: inline-block; border: 1px solid var(--brass); color: var(--brass);
+  text-transform: uppercase; letter-spacing: .2em; font-size: .68rem; font-weight: 600;
+  padding: .45rem .95rem; border-radius: 999px;
+}
+.drawer__empty .btn { margin-top: .3rem; }
+
+@media (max-width: 760px) {
+  .hero__horse { width: 78vw; right: -16vw; top: auto; bottom: 3%; transform: none; opacity: .12; }
+  .hero__horse svg { animation: none; }
 }

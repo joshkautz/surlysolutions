@@ -38,20 +38,22 @@
   if (grid) {
     PRODUCTS.forEach((p, i) => {
       const card = document.createElement("article");
-      card.className = "card reveal";
+      card.className = "card card--soldout reveal";
       card.style.transitionDelay = prefersReduced ? "0s" : (i % 3) * 0.08 + "s";
       card.innerHTML = `
         <div class="card__media">
           <span class="card__tag ${p.tagGold ? "card__tag--gold" : ""}">${p.tag}</span>
           ${horseSVG(p.c1, p.c2)}
+          <span class="card__stamp" aria-hidden="true">Sold Out</span>
         </div>
         <div class="card__body">
           <span class="card__region">${p.region}</span>
           <h3 class="card__name">${p.name}</h3>
           <p class="card__notes">${p.notes}</p>
+          <p class="card__status">Sold out · waitlist open</p>
           <div class="card__foot">
             <span class="card__price">${fmt(p.price)} <small>/ straw</small></span>
-            <button class="card__add" data-id="${p.id}" aria-label="Reserve ${p.name}">Reserve</button>
+            <a class="card__waitlist" href="#reserve" aria-label="Join the waitlist for ${p.name}">Join waitlist <span aria-hidden="true">→</span></a>
           </div>
         </div>`;
       grid.appendChild(card);
@@ -66,6 +68,7 @@
   const cartCountLabel = $("#cartCountLabel");
   const drawerItems = $("#drawerItems");
   const drawerEmpty = $("#drawerEmpty");
+  const drawerFoot = $("#drawerFoot");
   const drawerTotal = $("#drawerTotal");
   const checkoutBtn = $("#checkoutBtn");
 
@@ -89,9 +92,11 @@
     drawerItems.innerHTML = "";
     if (qty === 0) {
       drawerEmpty.hidden = false;
+      if (drawerFoot) drawerFoot.hidden = true;
       checkoutBtn.disabled = true;
     } else {
       drawerEmpty.hidden = true;
+      if (drawerFoot) drawerFoot.hidden = false;
       checkoutBtn.disabled = false;
       cart.forEach((q, id) => {
         const p = PRODUCTS.find((x) => x.id === id);
@@ -195,6 +200,12 @@
   overlay.addEventListener("click", closeDrawer);
   checkoutBtn.addEventListener("click", () => {
     showToast("This is a parody boutique — no payment taken. Thank you for playing along!");
+  });
+  // In-drawer "Join the waitlist" closes the drawer and scrolls to the form.
+  const drawerWaitlistBtn = $("#drawerWaitlistBtn");
+  if (drawerWaitlistBtn) drawerWaitlistBtn.addEventListener("click", () => {
+    closeDrawer();
+    showToast("The waitlist is open — leave your details below.");
   });
 
   /* ============================================================
