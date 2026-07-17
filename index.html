@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#14261d" />
+  <title>Maresfield &amp; Vale — Bespoke Equine Genetics</title>
+  <meta name="description" content="Maresfield &amp; Vale — purveyors of single-sire, cold-chain, hand-selected bespoke equine genetics since 1987. Considered breeding for the discerning stud." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maresfield &amp; Vale — Bespoke Equine Genetics" />
+  <meta property="og:description" content="Single-sire, cold-chain, hand-selected. The world's most considered equine genetics, reserved by the straw." />
+  <meta property="og:url" content="https://bespokehorsecum.store/" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="wordmark" href="#top" aria-label="Maresfield and Vale, home">
+        <span class="wordmark__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34" role="img" aria-hidden="true">
+            <path d="M8 34c0-9 3-15 8-19-2-3-2-6-1-9 3 2 5 4 6 7 3-2 6-3 10-3-2 3-5 5-8 6 3 3 4 7 4 12 0 2 0 4 1 6H8z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="wordmark__text">
+          <span class="wordmark__name">Maresfield &amp; Vale</span>
+          <span class="wordmark__sub">Est. 1987</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list" id="navList">
+          <li><a href="#collection">The Collection</a></li>
+          <li><a href="#provenance">Provenance</a></li>
+          <li><a href="#craft">The Craft</a></li>
+          <li><a href="#voices">Voices</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-toggle" id="cartToggle" aria-haspopup="dialog" aria-controls="cartDrawer" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 5h2l1.5 11.5A2 2 0 0 0 9.5 18h8a2 2 0 0 0 2-1.6L21 8H7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/>
+          </svg>
+          <span class="cart-toggle__label">Reserve</span>
+          <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+          <span class="visually-hidden" id="cartCountLabel">0 items reserved</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-controls="navList" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__grain"></div>
+      </div>
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Purveyors of Bespoke Equine Genetics — Since 1987</p>
+        <h1 class="hero__title reveal" id="heroTitle">
+          The world's most<br /><em>considered</em> genetics.
+        </h1>
+        <p class="hero__lede reveal">
+          Single-sire. Cold-chain. Hand-selected by our master stud sommeliers.
+          Every straw is drawn from a bloodline of intention and shipped in
+          temperature-honest vessels to your paddock.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#collection">Explore the Collection</a>
+          <a class="btn btn--ghost" href="#provenance">Our Provenance</a>
+        </div>
+        <dl class="hero__stats reveal" aria-label="At a glance">
+          <div><dt>Bloodlines curated</dt><dd data-count="38">38</dd></div>
+          <div><dt>Straws per vintage</dt><dd data-count="12">12</dd></div>
+          <div><dt>Cold-chain integrity</dt><dd data-count="100" data-suffix="%">100%</dd></div>
+        </dl>
+      </div>
+      <a class="hero__scroll" href="#marquee" aria-label="Scroll to learn more">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <section class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Single-Sire</span><span aria-hidden="true">·</span>
+        <span>Cold-Chain Certified</span><span aria-hidden="true">·</span>
+        <span>Hand-Drawn</span><span aria-hidden="true">·</span>
+        <span>Small-Batch</span><span aria-hidden="true">·</span>
+        <span>Terroir-Forward</span><span aria-hidden="true">·</span>
+        <span>Ethically Stabled</span><span aria-hidden="true">·</span>
+        <span>Single-Sire</span><span aria-hidden="true">·</span>
+        <span>Cold-Chain Certified</span><span aria-hidden="true">·</span>
+        <span>Hand-Drawn</span><span aria-hidden="true">·</span>
+        <span>Small-Batch</span><span aria-hidden="true">·</span>
+        <span>Terroir-Forward</span><span aria-hidden="true">·</span>
+        <span>Ethically Stabled</span><span aria-hidden="true">·</span>
+      </div>
+    </section>
+
+    <!-- ===================== COLLECTION ===================== -->
+    <section class="section collection" id="collection" aria-labelledby="collectionTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">The Collection</p>
+          <h2 class="section__title" id="collectionTitle">This season's reserve</h2>
+          <p class="section__lede">
+            Twelve straws per vintage. When a bloodline is gone, it is gone.
+            Each release is cellared at −196&nbsp;°C and released to a
+            waitlist of considered breeders.
+          </p>
+        </header>
+
+        <div class="grid" id="productGrid">
+          <!-- product cards injected by JS from data below -->
+        </div>
+        <p class="collection__note reveal">All reservations are held for 14 days. Straws ship in vapour-phase dry shippers with a signed certificate of provenance.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PROVENANCE ===================== -->
+    <section class="section provenance" id="provenance" aria-labelledby="provTitle">
+      <div class="container provenance__inner">
+        <div class="provenance__intro reveal">
+          <p class="eyebrow">Provenance</p>
+          <h2 class="section__title" id="provTitle">From paddock to paddock, honestly.</h2>
+          <p class="section__lede">
+            We believe genetics should be traceable to the blade of grass.
+            Nothing anonymous. Nothing rushed. A process refined across four
+            decades and three generations of the Vale family.
+          </p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Selection</h3>
+            <p>Our sommeliers taste — figuratively — hundreds of pedigrees. Fewer than two percent are invited to the barn.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Collection</h3>
+            <p>Drawn by hand in a low-stress, classical-music-appointed suite. Each sire sets his own tempo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Cellaring</h3>
+            <p>Vitrified and held in single-origin cryo-vaults, each straw numbered and logged to its bloodline.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Delivery</h3>
+            <p>Shipped in a vapour-phase vessel with a wax-sealed certificate. Cold-chain honest, always.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CRAFT / STATS ===================== -->
+    <section class="section craft" id="craft" aria-labelledby="craftTitle">
+      <div class="container craft__inner">
+        <div class="craft__copy reveal">
+          <p class="eyebrow">The Craft</p>
+          <h2 class="section__title" id="craftTitle">Terroir you can trust.</h2>
+          <p>
+            A stallion is only ever as considered as the meadow beneath him.
+            Our sires graze on limestone-rich pasture, rotate on a lunar
+            schedule, and are never, ever hurried. The result is genetics with
+            structure, length, and a quietly confident finish.
+          </p>
+          <ul class="craft__list">
+            <li>Limestone-forward, single-meadow pasture</li>
+            <li>Zero-rush, sommelier-supervised collection</li>
+            <li>Batch numbers traceable to the individual sire</li>
+            <li>Wax-sealed certificate of provenance with every order</li>
+          </ul>
+          <a class="btn btn--dark" href="#reserve">Join the waitlist</a>
+        </div>
+        <figure class="craft__figure reveal" aria-hidden="true">
+          <div class="craft__card">
+            <div class="craft__ribbon">Reserve</div>
+            <div class="craft__seal">
+              <svg viewBox="0 0 120 120" width="120" height="120" role="img" aria-hidden="true">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6"/>
+                <path d="M40 78c0-16 5-27 14-34-3-5-3-11-1-16 5 3 9 7 10 12 5-3 11-5 17-5-3 5-8 9-13 11 5 5 7 12 7 21 0 4 0 8 2 11H40z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <text x="60" y="112" text-anchor="middle" font-size="8" letter-spacing="2" fill="currentColor">M &amp; V · 1987</text>
+              </svg>
+            </div>
+            <p class="craft__cardtext">Certificate of Provenance</p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== VOICES ===================== -->
+    <section class="section voices" id="voices" aria-labelledby="voicesTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Voices</p>
+          <h2 class="section__title" id="voicesTitle">Considered breeders, considered words</h2>
+        </header>
+        <div class="voices__grid">
+          <blockquote class="quote reveal">
+            <p>“The certificate arrived wax-sealed. The straw arrived colder than my ex-husband. Impeccable.”</p>
+            <footer>— A. Pemberton, <cite>Cotswold Stud</cite></footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“I've reserved from many houses. Maresfield &amp; Vale is the only one that sends a tasting card.”</p>
+            <footer>— D. Marchetti, <cite>Tuscan Bloodstock</cite></footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Terroir-forward, structured, unhurried. My mare has never looked more optimistic.”</p>
+            <footer>— H. Okonkwo, <cite>Ridgeline Farm</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESERVE / CTA ===================== -->
+    <section class="section reserve" id="reserve" aria-labelledby="reserveTitle">
+      <div class="container reserve__inner reveal">
+        <p class="eyebrow">Reserve</p>
+        <h2 class="section__title" id="reserveTitle">Join the waitlist</h2>
+        <p class="section__lede">
+          New vintages are released four times a year to our list first.
+          Leave your details and we'll be in touch when the next bloodline is drawn.
+        </p>
+        <form class="reserve__form" id="waitlistForm" novalidate>
+          <div class="field">
+            <label for="wlName">Name</label>
+            <input id="wlName" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="wlEmail">Email</label>
+            <input id="wlEmail" name="email" type="email" autocomplete="email" required />
+            <p class="field__error" id="wlEmailError" role="alert" hidden>Please enter a valid email.</p>
+          </div>
+          <button class="btn btn--primary" type="submit">Request an invitation</button>
+          <p class="reserve__status" id="wlStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="wordmark__name">Maresfield &amp; Vale</span>
+        <p>Purveyors of bespoke equine genetics.<br />Est. 1987 · Vale Farm, The Cotswolds.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#collection">The Collection</a>
+        <a href="#provenance">Provenance</a>
+        <a href="#craft">The Craft</a>
+        <a href="#reserve">Reserve</a>
+      </nav>
+    </div>
+    <div class="container footer__base">
+      <p class="footer__disclaimer">
+        Maresfield &amp; Vale is a satirical work of fiction created for entertainment.
+        It is not a real company; no equine genetic material is sold, shipped, or
+        exists here. Any resemblance to actual bloodlines is purely coincidental.
+      </p>
+      <p class="footer__copy">© <span id="year">2026</span> Maresfield &amp; Vale (a parody). All whinnies reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== CART DRAWER ===================== -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer__head">
+      <h2 id="drawerTitle">Your Reservation</h2>
+      <button class="drawer__close" id="drawerClose" aria-label="Close reservation">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="drawer__body" id="drawerBody">
+      <p class="drawer__empty" id="drawerEmpty">Your reservation is empty. Every great bloodline begins with a single straw.</p>
+      <ul class="drawer__items" id="drawerItems"></ul>
+    </div>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Estimated total</span><span id="drawerTotal">$0</span></div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn" disabled>Proceed to considered checkout</button>
+      <p class="drawer__fineprint">A gesture, not a transaction — this boutique is a parody and takes no payment.</p>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
